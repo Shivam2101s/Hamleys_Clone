@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* Header */
+
+header {
+  height: 80px;
+  background-color: #cf102d;
+}
+
+/*BODY */
+
+#container {
+  min-height: 700px;
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: row;
+}
+
+#bag {
+  width: 60%;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+}
+
+#bagHeading {
+  font-size: 28px;
+}
+
+.productDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5%;
+  height: 150px;
+  border-bottom: 3px solid #d4d4d4;
+  gap: 10px;
+}
+.productDiv img {
+  width: 18%;
+}
+#productName {
+  width: 60%;
+  font-size: 18px;
+  font-weight: 550;
+}
+#productPrice {
+  font-size: 20px;
+  font-weight: 550;
+  margin-top: 80px;
+}
+
+#clearBtn {
+  width: 10%;
+  font-size: 16px;
+  font-weight: 550;
+  background-color: white;
+  border-bottom: 5px solid #cf102d;
+  border-top: 2px solid #cf102d;
+  border-left: 2px solid #cf102d;
+  border-right: 5px solid #cf102d;
+  border-radius: 20px;
+  padding: 5px;
+  margin-left: 90%;
+  margin-top: -25px;
+}
+
+#checkout {
+  width: 40%;
+  background-color: #fcf3ec;
+  /* border: 1px solid red; */
+}
+
+#pay {
+  width: 85%;
+  margin: 20px auto;
+  height: 650px;
+  border-right: 10px solid #f3d0b3;
+  border-bottom: 10px solid #f3d0b3;
+  background-color: white;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+#total {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+  border-bottom: 3px solid #d4d4d4;
+  gap: 5px;
+}
+#total p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#coupon,
+#proceed {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+  align-items: center;
+}
+
+#coupon input {
+  width: 85%;
+  height: 60px;
+  padding: 5px 20px;
+  font-size: 20px;
+  border-radius: 30px;
+  outline: none;
+  border: 3px solid #d4d4d4;
+}
+#couponBtn {
+  width: 12%;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 20px;
+}
+#checkoutBtn {
+  width: 100%;
+  height: 70px;
+  font-size: 20px;
+  border-radius: 35px;
+  background-color: white;
+  border-bottom: 5px solid #cf102d;
+  border-top: 2px solid #cf102d;
+  border-left: 2px solid #cf102d;
+  border-right: 5px solid #cf102d;
+}
+#terms {
+  text-align: center;
+  font-size: 14px;
+}
+
+#mode img {
+  width: 100%;
+}
+
+#help p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Footer */
+
+footer {
+  height: 400px;
+  background-color: #fcf3ec;
+}
+
+footer div {
+  height: 50px;
+  background-color: #cf102d;
+}
