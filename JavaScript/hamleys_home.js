@@ -195,23 +195,36 @@ let parent = document.getElementById("container");
 function showProduct(data) {
   data.forEach((product) => {
     let div = document.createElement("div");
+    div.setAttribute("class", "toysDiv");
 
     let name = document.createElement("p");
+    name.setAttribute("class", "toyName")
     name.innerText = product.name;
 
     let price = document.createElement("p");
-    price.innerText = product.price;
+    price.setAttribute("class", "toyPrice")
+    price.innerText = `₹ ${product.price}`;
 
     let image = document.createElement("img");
     image.src = product.img;
 
     let btn = document.createElement("button");
-    btn.innerText = "Add to Cart";
+    btn.setAttribute("class", "addCartbtn")
+    btn.innerHTML = ` Add to Cart <i class="fas fa-shopping-bag">`;
     btn.onclick = function () {
       add_to_cart(product);
     };
 
-    div.append(image, name, price, btn);
+
+    let imgDiv = document.createElement("div");
+    imgDiv.setAttribute("class", "imgDiv");
+
+    let detailDiv = document.createElement("div");
+    detailDiv.setAttribute("class", "detailDiv");
+
+    imgDiv.append(image, btn);
+    detailDiv.append(name, price);
+    div.append(imgDiv, detailDiv);
     parent.append(div);
   });
 }
@@ -304,13 +317,13 @@ function sortWithPrice() {
       return a.price - b.price;
     });
     console.log(newData);
-    showProduct();
+    showProduct(newData);
   } else if (sortings == "HighToLow") {
     let newData = data.sort(function (a, b) {
       return b.price - a.price;
     });
     console.log(newData);
-    showProduct();
+    showProduct(newData);
   }
 }
 

@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* ---------------------------------Navbar CSS-------------------------- */
 header {
   background-color: #cf102d;
   display: flex;
@@ -84,11 +85,41 @@ a {
 #navlink_3 li {
   margin: 15px;
 }
+
+/* ----------------Search Div CSS------------------- */
+
+#showSearch {
+  position: absolute;
+  top: 100px;
+  right: 420px;
+  border: 1px solid red;
+  width: 350px;
+  height: 80px;
+}
+#smallDiv img {
+  width: 80px;
+}
+
+/* ------------Footer CSS-------------- */
+#footerTop {
+  margin-top: 20px;
+  height: 50px;
+  background-color: #cf102d;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 #bottom {
   display: flex;
-  margin-left: 3%;
-  margin-top: 20px;
-  border: 1px solid black;
+  background-color: #fcf3ec;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 30px;
+  justify-content: space-evenly;
 }
 #bottom div {
   margin-right: 4%;
@@ -102,7 +133,6 @@ a {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  border: 1px solid red;
   max-width: 250px;
 }
 #most_searched {
@@ -132,29 +162,122 @@ h3 {
   font-size: 22px;
   margin-top: 20px;
 }
+
+
+/*------------------------------------- Middle Div CSS --------------------------------------- */
+
 #container {
   display: grid;
-  grid-template-columns: repeat(4, 20%);
-  grid-gap: 1%;
+  grid-template-columns: repeat(4, 23%);
+  justify-content: space-evenly;
+  grid-gap: 2%;
   margin: 20px;
   padding: 10px;
-  border: 1px solid black;
 }
-#container div {
-  border: 1px solid black;
+#headText {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 30px;
 }
-#container div img {
+#headText:hover {
+  cursor: pointer;
+}
+#mainDiv {
+  margin-top: 30px;
+  background-color: #fcf3ec;
+  display: flex;
+  padding: 20px 20px 80px 20px;
+}
+#filterDiv {
+  margin-top: 10px;
+  width: 20%;
+  height: 400px;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+#filterDiv div {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 550;
+  padding-bottom: 10px;
+  border-bottom: 5px solid #ffe4ce;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+#filterDiv div input {
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+  border: 2px solid black;
+}
+#filterDivHead {
+  font-size: 22px;
+  padding-bottom: 10px;
+  border-bottom: 5px solid #f3d0b3;
+}
+
+#sortDiv {
+  background-color: #cf102d;
+  height: 55px;
+  border-radius: 26px;
+  width: 96%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding-left: 75%;
+}
+#sortbyPrice {
+  border: none;
+  background: #cf102d;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+}
+#sortbyPrice option {
+  background-color: white;
+  color: black;
+}
+#rightDiv {
+  width: 80%;
+}
+.toysDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.imgDiv {
+  background-color: white;
+  border-bottom: 5px solid #f3d0b3;
+  border-right: 5px solid #f3d0b3;
+}
+.imgDiv img {
   width: 100%;
-  height: 200px;
 }
-#showSearch {
-  position: absolute;
-  top: 100px;
-  right: 420px;
-  border: 1px solid red;
-  width: 350px;
-  height: 80px;
+.addCartbtn {
+  border: none;
+  outline: none;
+  background-color: white;
+  color: #cf102d;
+  font-size: 18px;
+  margin-left: 55%;
+  margin-bottom: 10px;
 }
-#smallDiv img {
-  width: 80px;
+.addCartbtn:hover {
+  cursor: pointer;
+}
+.detailDiv {
+  padding: 10px 5px;
+}
+.toyName {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.toyPrice {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 550;
+  color: #cf102d;
 }
