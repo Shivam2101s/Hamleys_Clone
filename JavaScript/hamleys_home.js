@@ -198,23 +198,22 @@ function showProduct(data) {
     div.setAttribute("class", "toysDiv");
 
     let name = document.createElement("p");
-    name.setAttribute("class", "toyName")
+    name.setAttribute("class", "toyName");
     name.innerText = product.name;
 
     let price = document.createElement("p");
-    price.setAttribute("class", "toyPrice")
+    price.setAttribute("class", "toyPrice");
     price.innerText = `₹ ${product.price}`;
 
     let image = document.createElement("img");
     image.src = product.img;
 
     let btn = document.createElement("button");
-    btn.setAttribute("class", "addCartbtn")
+    btn.setAttribute("class", "addCartbtn");
     btn.innerHTML = ` Add to Cart <i class="fas fa-shopping-bag">`;
     btn.onclick = function () {
       add_to_cart(product);
     };
-
 
     let imgDiv = document.createElement("div");
     imgDiv.setAttribute("class", "imgDiv");
@@ -260,9 +259,13 @@ let timerId;
 let searchContainer = document.getElementById("showSearch");
 
 function search(str) {
-  //   let str = document.getElementById("search").value;
   searchContainer.innerHTML = null;
   str = str.toLowerCase();
+  if (str.length == 0) {
+    searchContainer.style.display = "none";
+  } else {
+    searchContainer.style.display = "block";
+  }
 
   data.forEach(function (product) {
     let to_check = product.name;

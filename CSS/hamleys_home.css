@@ -8,6 +8,7 @@ header {
   background-color: #cf102d;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: sticky;
   z-index: auto;
 }
@@ -28,10 +29,11 @@ a {
   display: none;
   position: absolute;
   top: 60px;
-  left: 10px;
-  right: 30px;
+  left: 0px;
   padding-top: 30px;
-  border: 1px solid black;
+  /* border: 1px solid green; */
+  background-color: white;
+  width: 100%;
 }
 #category_parts {
   display: grid;
@@ -62,21 +64,30 @@ a {
   display: flex;
   list-style-type: none;
   margin-left: 8%;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 .navlink_1 li {
   margin: 15px;
 }
 #navlink_2 {
-  border: 1px solid black;
   margin-left: 4%;
+  display: flex;
+  align-items: center;
 }
 #navlink_2 input {
-  width: 280px;
+  width: 285px;
   height: 50px;
   border-radius: 20px;
+  border: none;
   margin-top: 8px;
   margin-bottom: 8px;
+  padding-left: 40px;
+  outline: none;
+}
+#navlink_2 p {
+  font-size: 25px;
+  position: absolute;
+  z-index: 1px;
 }
 #navlink_3 {
   display: flex;
@@ -90,14 +101,31 @@ a {
 
 #showSearch {
   position: absolute;
-  top: 100px;
-  right: 420px;
-  border: 1px solid red;
-  width: 350px;
-  height: 80px;
+  top: 45px;
+  right: 30%;
+  display: none;
+  background-color: white;
+  width: 285px;
+  padding-top: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  max-height: 180px;
+  overflow-x: none;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+#smallDiv {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  font-size: 15px;
+  border-bottom: 1px solid rgb(224, 223, 223);
 }
 #smallDiv img {
   width: 80px;
+  margin-right: 8px;
 }
 
 /* ------------Footer CSS-------------- */
@@ -163,7 +191,6 @@ h3 {
   margin-top: 20px;
 }
 
-
 /*------------------------------------- Middle Div CSS --------------------------------------- */
 
 #container {
@@ -196,7 +223,7 @@ h3 {
 }
 #filterDiv div {
   padding: 10px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 550;
   padding-bottom: 10px;
   border-bottom: 5px solid #ffe4ce;
@@ -259,10 +286,11 @@ h3 {
   outline: none;
   background-color: white;
   color: #cf102d;
-  font-size: 18px;
+  font-size: 15px;
   margin-left: 55%;
   margin-bottom: 10px;
 }
+
 .addCartbtn:hover {
   cursor: pointer;
 }
@@ -271,7 +299,7 @@ h3 {
 }
 .toyName {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: bold;
   margin-bottom: 10px;
 }
